@@ -31,8 +31,18 @@ function cargarPlanetas() {
         entidad.setAttribute("geometry", { primitive: "sphere", radius: 2 });
         entidad.setAttribute("material", { shader: "flat", src: `#${planeta.nombre}` });
         entidad.setAttribute("animation", { property: "rotation", dur: "3000", to: "0 360 0", easing: "linear", loop: true });
-        entidad.object3D.position.set( 0, 0, planeta.posicionZ   );
+        entidad.object3D.position.set( 0, 0, planeta.posicionZ);
+        entidad.setAttribute("shootable", "")
+        entidad.setAttribute("value", `${planeta.descripcion}`)
         
         entidadAnimacion.appendChild( entidad );
     } );
 }
+
+AFRAME.registerComponent("shootable", {
+    init: function() {
+        this.el.addEventListener("click", () => {
+            document.querySelector("[text]").setAttribute("value", this.el.getAttribute("value"));
+        });
+    }
+});
