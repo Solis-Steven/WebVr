@@ -8,7 +8,6 @@
 
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="./js/app.js" type="module"></script>
-    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
@@ -18,7 +17,7 @@
              se carge previo a la ejecucion de la escena-->
         <a-assents> 
             <img src="./textures/sky.jpeg" id="sky">
-            <img src="./textures/sol-textura.jpg" id="sol">
+            <img src="./textures/sol.jpg" id="sol">
             <img src="./textures/mercurio.jpg" id="mercurio">
             <img src="./textures/venus.jpeg" id="venus">
             <img src="./textures/tierra.jpg" id="tierra">
@@ -31,56 +30,50 @@
 
         <a-sky src="#sky"></a-sky>   
 
-        <a-entity id="entidadAnimacion"
-                  position="0 3 0" 
-                  rotation="0 0 0"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000;">
-        </a-entity>
-
         <a-entity id="solAnimacion"
-                  position="0 3 0" 
+                  position="10 3 0" 
                   rotation="0 0 0"
                   animation="property: rotation; to: 0 360 0; loop: true; dur: 10000;">
         </a-entity>
 
         <a-entity id="mercurioAnimacion"
-                  position="0 3 0" 
+                  position="20 3 0" 
                   rotation="0 0 0"
                   animation="property: rotation; to: 0 360 0; loop: true; dur: 15000;">
         </a-entity>
 
         <a-entity id="venusAnimacion"
-                  position="0 3 0" 
+                  position="30 3 0" 
                   rotation="0 0 0"
                   animation="property: rotation; to: 0 360 0; loop: true; dur: 20000;">
         </a-entity>
 
         <a-entity id="tierraAnimacion"
-                  position="0 3 0" 
+                  position="40 3 0" 
                   rotation="0 0 0"
                   animation="property: rotation; to: 0 360 0; loop: true; dur: 25000;">
         </a-entity>
 
         <a-entity id="marteAnimacion"
-                  position="0 3 0" 
+                  position="50 3 0" 
                   rotation="0 0 0"
                   animation="property: rotation; to: 0 360 0; loop: true; dur: 30000;">
         </a-entity>
 
         <a-entity id="jupiterAnimacion"
-                  position="0 3 0" 
+                  position="60 3 0" 
                   rotation="0 0 0"
                   animation="property: rotation; to: 0 360 0; loop: true; dur: 35000;">
         </a-entity>
 
         <a-entity id="saturnoAnimacion"
-                  position="0 3 0" 
+                  position="70 3 0" 
                   rotation="0 0 0"
                   animation="property: rotation; to: 0 360 0; loop: true; dur: 40000;">
         </a-entity>
 
         <a-entity id="uranoAnimacion"
-                  position="0 3 0" 
+                  position="80 3 0" 
                   rotation="0 0 0"
                   animation="property: rotation; to: 0 360 0; loop: true; dur: 45000;">
         </a-entity>
@@ -91,8 +84,6 @@
                   animation="property: rotation; to: 0 360 0; loop: true; dur: 50000;">
         </a-entity>
         
-
-
 
     </a-scene>
 
