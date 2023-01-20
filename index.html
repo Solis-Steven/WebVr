@@ -26,76 +26,34 @@
             <img src="./textures/saturno.jpg" id="saturno">
             <img src="./textures/urano.jpg" id="urano">
             <img src="./textures/neptuno.jpeg" id="neptuno">
+            <audio src="./sonidos/windLow.mp3" id="espacio"></audio>
         </a-assents>
 
-        <a-sky src="#sky"></a-sky>   
+        <a-sky src="#sky"
+               sound="src: #espacio; autoplay: true">
+        </a-sky>   
 
-        <a-entity id="solAnimacion"
-                  position="0 3 0" 
-                  rotation="0 0 0"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000;">
-        </a-entity>
-
-        <a-entity id="mercurioAnimacion"
-                  position="0 3 0" 
-                  rotation="0 0 0"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 12500;">
-        </a-entity>
-
-        <a-entity id="venusAnimacion"
-                  position="0 3 0" 
-                  rotation="0 0 0"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 15000;">
-        </a-entity>
-
-        <a-entity id="tierraAnimacion"
-                  position="0 3 0" 
-                  rotation="0 0 0"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 17500;">
-        </a-entity>
-
-        <a-entity id="marteAnimacion"
-                  position="0 3 0" 
-                  rotation="0 0 0"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 20000;">
-        </a-entity>
-
-        <a-entity id="jupiterAnimacion"
-                  position="0 3 0" 
-                  rotation="0 0 0"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 22500;">
-        </a-entity>
-
-        <a-entity id="saturnoAnimacion"
-                  position="0 3 0" 
-                  rotation="0 0 0"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 25000;">
-        </a-entity>
-
-        <a-entity id="uranoAnimacion"
-                  position="0 3 0" 
-                  rotation="0 0 0"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 27500;">
-        </a-entity>
-
-        <a-entity id="neptunoAnimacion"
-                  position="0 3 0" 
-                  rotation="0 0 0"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 30000;">
-        </a-entity>
+        
 
         <a-entity camera look-controls>
             <a-entity cursor="fuse: true; fuseTimeout: 100"
                       position="0 0 -1" 
                       geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-                      material="shader: flat"></a-entity>
+                      material="shader: flat"
+                      raycaster="objects: .planeta"></a-entity>
 
             <a-text value="" 
                     color="white" 
-                    position="0.8 -0.5 -1" 
+                    position="0 -0.4 -1" 
                     width="1" 
                     align="center">
             </a-text>
+
+            <a-rectangle color="red" position="0.8 -0.5 -1" width="1" height="1" ></a-rectangle>
+        </a-entity>
+
+        <a-entity geometry="primitive: plane; height: 10; width: 10" 
+                  material="side: double">
         </a-entity>
         
 
