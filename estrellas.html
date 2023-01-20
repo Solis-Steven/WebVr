@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="./js/sistemaEstrella.js" type="module"></script>
+</head>
+<body>
+
+    <a-scene id="escenaAndrik">
+
+        <a-assents> 
+            <img src="./textures/sky.jpeg" id="sky">
+            <img src="./textures/sol.jpg" id="solEstrella">
+            <img src="./textures/nubeGasPolvo.jpg" id="nubeGasPolvo">
+            <img src="./textures/giganteRoja.jpg" id="giganteRoja">
+            <img src="./textures/enanaBlanca.jpg" id="enanaBlanca">
+            <img src="./textures/enanaNegra.jpg" id="enanaNegra">
+            <audio src="./sonidos/windLow.mp3" id="espacio" preload="auto"></audio>
+        </a-assents>
+
+        <a-sky src="#sky"
+               sound="src: #espacio; autoplay: true">
+        </a-sky>   
+
+
+    
+
+
+        <!-- <a-entity geometry="primitive: sphere; radius: 10" 
+                  material="shader: flat; src: #giganteRoja"
+                  position="0 0 -20" 
+                  animation="property: rotation; dur: 30000; to: 0 360 0; easing: linear; loop: true">
+        </a-entity>
+
+
+        <a-entity geometry="primitive: sphere; radius: 2" 
+                  material="shader: flat; src: #enanaBlanca"
+                  position="0 0 -10" 
+                  animation="property: rotation; dur: 30000; to: 0 360 0; easing: linear; loop: true">
+        </a-entity> -->
+
+        <a-entity geometry="primitive: sphere; radius: 10" 
+                  material="shader: flat; src: #nubeGasPolvo"
+                  position="15 0 -25" 
+                  animation="property: rotation; dur: 30000; to: 0 360 0; easing: linear; loop: true"
+                  shootable=""
+                  class="estrella"
+                  value="1">
+        </a-entity>
+        
+        <!-- <a-entity geometry="primitive: plane; width: 20%; height: 20%"
+                  material="shader: flat; src: #nubeGasPolvo"
+                  position="5 0 -20"
+                  shootable=""
+                  class="estrella"
+                  value="1"
+                  radius="">
+        </a-entity> -->
+
+
+        <a-entity camera look-controls>
+            <a-entity cursor="fuse: true; fuseTimeout: 100"
+                      position="0 0 -1" 
+                      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                      material="shader: flat"
+                      raycaster="objects: .estrella"></a-entity>
+
+            <a-text id="textoEstrella"
+                    value="En el proceso de la fomración de una estrella, una gran nube de gas tiende a contraerse, debido a lo cual, la temperatura y la concentración de materia se elevan, lo que permite que comience el proceso de fusión nuclear. Durante este proceso, el hidrógeno se transforma en helio. Una vez que se agota el hidrógeno, la contracción se detiene y el gas se convierte en una estrella, como es el caso de nuestro Sol." 
+                    color="white" 
+                    position="0 -0.4 -1" 
+                    width="1" 
+                    align="center">
+            </a-text>
+        </a-entity>
+        
+
+    </a-scene>
+
+</body>
+</html>
