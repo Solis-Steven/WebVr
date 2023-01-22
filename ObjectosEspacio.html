@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="./js/LogicaObjectosEspacio.js" type="module"></script>
+</head>
+<body>
+
+    <a-scene id="escenaObjectosEspacio">
+
+        <!-- Se asegura de que todos los elementos externos
+             se carge previo a la ejecucion de la escena-->
+        <a-assents> 
+            <img src="./textures/sky.jpeg" id="sky">
+            <img src="./textures/sol.jpg" id="sol">
+            <img src="./textures/meteorito.jpg" id="meteorito">
+            <img src="./textures/NubeOort.png" id="oort">
+            <img src="./textures/Asteroide.jpg" id="asteroide">
+            <img src="./textures/Agujero.png" id="agujeroNegro">
+            <img src="./textures/luna.jpg" id="satelite">
+            <img src="./textures/nebulosasemision.jpg" id="nebulosa">
+            <img src="./textures/NubesInterestelares.jpg" id="nubeInterestelar">
+            <img src="./textures/Polvo.avif" id="polvoCosmico">
+            <img src="./textures/tierra.jpg" id="planetaTierra">
+            <img src="./textures/Vacio.jpg" id="vacio">
+            <audio src="./sonidos/SonidoFondo.mp3" id="espacio"></audio>
+        </a-assents>
+
+        <a-sky src="#sky"
+               sound="src: #espacio; autoplay: true">
+        </a-sky>   
+
+        
+
+        <a-entity camera look-controls>
+            <a-entity cursor="fuse: true; fuseTimeout: 100"
+                      position="0 0 -1" 
+                      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                      material="shader: flat"
+                      raycaster="objects: .objectosEspacio"></a-entity>
+
+            <a-text value="" 
+                    color="white" 
+                    position="0 -0.4 -1" 
+                    width="1" 
+                    align="center">
+            </a-text>
+
+        </a-entity>
+        
+
+    </a-scene>
+
+</body>
+</html>
