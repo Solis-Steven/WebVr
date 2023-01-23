@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<body>
+
+    <a-scene id="escenaAcercaDe">
+
+        <a-assents> 
+            <img src="./textures/sky.jpeg" id="sky">
+            <audio src="./sonidos/SonidoFondo.mp3" id="espacio" preload="auto"></audio>
+        </a-assents>
+
+        <a-sky src="#sky"
+               sound="src: #espacio; autoplay: true">
+        </a-sky>   
+
+        <a-entity>
+            <a-box position="0 0 -2" rotation="0 0 0" color="#012228" scale = " 5 3 0"></a-box>
+            <a-text id="menu"
+            value="Menu" 
+            color="white" 
+            position="0 0.5 -1" 
+            width="5" 
+            align="center">
+            </a-text>
+        </a-entity>
+            <a-box position="-0.7 0.1 -1" rotation="0 0 0" color="#0e4e2a" scale = " 0.1 0.1 0" scr = "index.html" class=" oneClick"></a-box>
+            <a-text id="Index"
+            value="Sistema Solar" 
+            color="white" 
+            position="0 0.1 -1" 
+            width="2" 
+            align="center">
+            </a-text>
+        <a-entity>
+
+        </a-entity>
+            <a-box position="-0.7 -0.1 -1" rotation="0 0 0" color="#0e4e2a" scale = " 0.1 0.1 0" scr = "estrella.html" class=" oneClick"></a-box>
+            <a-text id="Estrellas"
+            value=" Ciclo de vida de una estrella" 
+            color="white" 
+            position="0 -0.1 -1" 
+            width="2" 
+            align="center">
+            </a-text>
+        <a-entity>
+
+        </a-entity>
+            <a-box position="-0.7 -0.3 -1" rotation="0 0 0" color="#0e4e2a" scale = " 0.1 0.1 0" scr = "estrella.html" class=" oneClick"></a-box>
+            <a-text id="Objectos"
+            value=" Objectos del espacio" 
+            color="white" 
+            position="0 -0.3 -1" 
+            width="2" 
+            align="center">
+            </a-text>
+        <a-entity>
+
+        </a-entity>
+            <a-box position="-0.7 -0.5 -1" rotation="0 0 0" color="#0e4e2a" scale = " 0.1 0.1 0" scr = "estrella.html" class=" oneClick"></a-box>
+            <a-text id="AcercaDe"
+            value=" Acerca de" 
+            color="white" 
+            position="0 -0.5 -1" 
+            width="2" 
+            align="center">
+            </a-text>
+    <a-entity>
+            
+        
+
+        
+
+   
+        
+
+        <a-entity camera look-controls>
+            <a-entity cursor="fuse: true; fuseTimeout: 100"
+                      position="0 0 -1" 
+                      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                      material="shader: flat"
+                      raycaster="objects: .clickable"></a-entity>
+        </a-entity>
+        
+
+    </a-scene>
+
+</body>
+</html>
