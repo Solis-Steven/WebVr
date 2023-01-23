@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<body>
+
+    <a-scene id="escenaAcercaDe">
+
+        <a-assents> 
+            <img src="./textures/sky.jpeg" id="sky">
+            <audio src="./sonidos/SonidoFondo.mp3" id="espacio" preload="auto"></audio>
+        </a-assents>
+
+        <a-sky src="#sky"
+               sound="src: #espacio; autoplay: true">
+        </a-sky>   
+
+
+        <a-box position="0 0 -2" rotation="0 0 0" color="#012228" scale = " 5 3 0"></a-box>
+
+        <a-text id="Acercade"
+                    value="Acerca de" 
+                    color="white" 
+                    position="0 0.5 -1" 
+                    width="5" 
+                    align="center">
+        </a-text>
+
+        <a-text id="nombre1"
+        value="Andrik Solano Jimenez" 
+        color="white" 
+        position="0 0.1 -1" 
+        width="2" 
+        align="center">
+        </a-text>
+
+        <a-text id="nombre2"
+        value="Steven Solis Obando" 
+        color="white" 
+        position="0 -0.1 -1" 
+        width="2" 
+        align="center">
+        </a-text>
+
+        <a-text id="nombre3"
+        value="Jose Luis Ramirez Hernandez" 
+        color="white" 
+        position="0 -0.3 -1" 
+        width="2" 
+        align="center">
+        </a-text>
+        
+
+        <a-entity camera look-controls>
+            <a-entity cursor="fuse: true; fuseTimeout: 100"
+                      position="0 0 -1" 
+                      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                      material="shader: flat"
+                     ></a-entity>
+
+        </a-entity>
+        
+
+    </a-scene>
+
+</body>
+</html>
